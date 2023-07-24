@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * get_func - look for the specifier
- * @x: variable to the function
+ * getFunc - look up for the specifiers
+ * @F: variable to the function
  * Return: function
  */
-int (*get_func(char x))(va_list)
+
+int (*getFunc(char F))(va_list)
 {
 	int i = 0;
 	spec arr[] = {
@@ -18,7 +19,7 @@ int (*get_func(char x))(va_list)
 	};
 	while (arr[i].valid)
 	{
-		if (x == arr[i].valid[0])
+		if (F == arr[i].valid[0])
 			return (arr[i].f);
 		i++;
 	}
