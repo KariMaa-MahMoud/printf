@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
 #include <stddef.h>
 /**
  * _printf - recreates the printf function
@@ -10,7 +10,7 @@
  */
 int _printf(const char *format, ...)
 {
-	if (format != NULL)
+	if (!format)
 	{
 		int count = 0, i;
 		int (*m)(va_list);
@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		i = 0;
 		if (format[0] == '%' && format[1] == '\0')
 			return (-1);
-		while (format != NULL && format[i] != '\0')
+		while (!format && format[i] != '\0')
 		{
 			if (format[i] == '%')
 			{
