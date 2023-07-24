@@ -20,20 +20,20 @@ int print_c(va_list args)
  */
 int print_s(va_list args)
 {
-	int i, count = 0;
+	int i, counter = 0;
 	char *str;
 
 	i = 0;
 	str = va_arg(args, char*);
-	if (str == NULL)
+	if (!str)
 		str = "(null)";
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
 		i++;
-		count++;
+		counter++;
 	}
-	return (count);
+	return (counter);
 }
 /**
  * print_percent - pass the percent sing
@@ -56,37 +56,37 @@ int print_percent(va_list args)
 /**
  * print_d - prints a decimal
  * @args: decimal argument
- * Return: counter
+ * Return: counterer
  */
 int print_d(va_list args)
 {
 
-	unsigned int absolute, aux, countnum, count;
+	unsigned int abs, abc, con, counter;
 	int n;
 
-	count = 0;
+	counter = 0;
 	n = va_arg(args, int);
 		if (n < 0)
 		{
-			absolute = (n * -1);
-			count += _putchar('-');
+			abs = (n * -1);
+			counter += _putchar('-');
 		}
 		else
-			absolute = n;
+			abs = n;
 
-	aux = absolute;
-	countnum = 1;
-	while (aux > 9)
+	abc = abs;
+	con = 1;
+	while (abc > 9)
 	{
-		aux /= 10;
-		countnum *= 10;
+		abc /= 10;
+		con *= 10;
 	}
-	while (countnum >= 1)
+	while (con >= 1)
 	{
-		count += _putchar(((absolute / countnum) % 10) + '0');
-		countnum /= 10;
+		counter += _putchar(((abs / con) % 10) + '0');
+		con /= 10;
 	}
-	return (count);
+	return (counter);
 }
 /**
  * print_i - prints integer
