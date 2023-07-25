@@ -1,4 +1,4 @@
-Write a function that produces output according to a format.
+Write or build a function that produces output according to a format.
 
 Prototype: int _printf(const char *format, ...);
 Returns: the number of characters printed (excluding the null byte used to end output to strings)
@@ -7,3 +7,6 @@ format is a character string. The format string is composed of zero or more dire
 c
 s
 %
+i
+d
+this is for the mandotory tasks
