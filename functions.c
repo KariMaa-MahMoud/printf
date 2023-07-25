@@ -1,11 +1,13 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
+
 /**
- * print_c - prints character
+ * print_c - to print character
  * @args: character argument
  * Return: number of characters
  */
+
 int print_c(va_list args)
 {
 	int c;
@@ -13,11 +15,13 @@ int print_c(va_list args)
 	c = va_arg(args, int);
 	return (_putchar(c));
 }
+
 /**
- * print_s - prints a string
+ * print_s - to print a string
  * @args: string  argument
  * Return: number of characters
  */
+
 int print_s(va_list args)
 {
 	int i, counter = 0;
@@ -35,12 +39,13 @@ int print_s(va_list args)
 	}
 	return (counter);
 }
+
 /**
- * print_percent - pass the percent sing
+ * print_percent - to read the percentage sing
  * @args: string  argument
  * Return: return the percent sing
- *
  */
+
 int print_percent(va_list args)
 {
 	char *str;
@@ -54,10 +59,11 @@ int print_percent(va_list args)
 }
 
 /**
- * print_d - prints a decimal
+ * print_d - to print decimals
  * @args: decimal argument
  * Return: counterer
  */
+
 int print_d(va_list args)
 {
 
@@ -88,8 +94,9 @@ int print_d(va_list args)
 	}
 	return (counter);
 }
+
 /**
- * print_i - prints integer
+ * print_i - to print integer
  * @args: integer argument
  * Return: the decimal function
  */
