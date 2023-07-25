@@ -2,7 +2,7 @@
 
 /**
  * get_func - to look for the specifier
- * @y: variable to the function
+ * @x: variable to the function
  * Return: function
  */
 
@@ -19,7 +19,7 @@ int (*get_func(char x))(va_list)
 	};
 	while (arr[i].valid)
 	{
-		if (y == arr[i].valid[0])
+		if (x == arr[i].valid[0])
 			return (arr[i].f);
 		i++;
 	}
